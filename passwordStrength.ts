@@ -18,7 +18,7 @@ import { checkPrime } from "node:crypto";
 function checkStrength(password: string): string {
   const checks: Record<string, boolean> = {};
   checks["checkLength"] = password.length > 8;
-  checks["checkCasing"] = /(?=.*[a-z])(?=.*[A-Z])/.test(password);
+  checks["checkCasing"] = /[a-z]/.test(password) && /[A-Z]/.test(password);
   checks["checkNumber"] = /\d+/.test(password);
   checks["checkSpecial"] = /[!@#$%^&*]/.test(password);
 
