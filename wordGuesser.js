@@ -36,7 +36,7 @@ function compare(word, guess) {
         if (matches[i] === "2") continue;
 
         for (let j = 0; j < length; j++) {
-            if (!used[j] & (guess[i] === word[j])) {
+            if (!used[j] && guess[i] === word[j]) {
                 matches[i] = "1";
                 used[j] = true;
                 break;
