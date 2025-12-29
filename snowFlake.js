@@ -6,6 +6,9 @@ import assert from "assert/strict";
  *  and attached to the end of the original line.
  *
  *  - Mirror a line by reversing all of its characters, including spaces.
+ *
+ *  @param {string} crystals
+ *  @returns {string}
  * */
 function generateSnowFlakes(crystals) {
     let newCrystals = "";
